@@ -30,7 +30,7 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ github.repository.name }}:${{ steps.short_sha.outputs.sha_short }}
-            ghcr.io/${{ github.repository_owner }}/${{ github.repository.name }}:latest
+            ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ steps.short_sha.outputs.sha_short }}
+            ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
